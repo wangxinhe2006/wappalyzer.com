@@ -1,0 +1,24 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+
+$theme-primary: #4608ad;
+$theme-secondary: #fafafa;
+
+$body-font-family: Averta, Arial, sans-serif;
+
+$font-size-root: 18px;
+
+@import '~vuetify/src/styles/styles.sass';
+
+$material-light: map-merge($material-light, (
+  text: (
+    primary: #4a4a4a
+  )
+));
+
+@import '~vuetify/src/components/VBtn/_variables.scss';
+
+$btn-text-transform: none;
+$btn-letter-spacing: normal;

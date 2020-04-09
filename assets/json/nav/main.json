@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Products",
+    "items": [
+      {
+        "title": "Datasets",
+        "to": "/datasets"
+      },
+      {
+        "title": "Bulk lookup",
+        "to": "/bulk"
+      },
+      {
+        "title": "APIs",
+        "to": "/api"
+      }
+    ]
+  },
+  {
+    "title": "Free tools",
+    "items": [
+      {
+        "title": "Technology lookup",
+        "to": "/lookup"
+      },
+      {
+        "title": "Browser extension",
+        "to": "/download"
+      },
+      {
+        "title": "Node.js module",
+        "to": "/nodejs"
+      }
+    ]
+  },
+  {
+    "title": "Resources",
+    "items": [
+      {
+        "title": "Browse technologies",
+        "to": "/technologies"
+      },
+      {
+        "title": "Frequently asked questions",
+        "to": "/faq/extension"
+      },
+      {
+        "title": "Developer documentation",
+        "to": "/docs"
+      }
+    ]
+  },
+  {
+    "title": "About",
+    "items": [
+      {
+        "title": "Our story",
+        "to": "/about"
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+@mixin fontFace($family, $src, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}.eot');
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'), url('#{$src}.woff') format('woff'), url('#{$src}.ttf') format('truetype'), url('#{$src}.svg##{$family}') format('svg');
+		font-style: $style;
+		font-weight: $weight;
+  }
+}
+
+@mixin avertaFont($src, $weight: normal, $style: normal) {
+	@include fontFace('Averta', '../fonts/averta/averta-#{$src}-webfont', $weight, $style);
+}
+
+@include avertaFont('thinitalic', 100, italic);
+@include avertaFont('thin', 100, normal);
+@include avertaFont('extrathinitalic', 200, italic);
+@include avertaFont('extrathin', 200, normal);
+@include avertaFont('lightitalic', 300, italic);
+@include avertaFont('light', 300, normal);
+@include avertaFont('regularitalic', 400, italic);
+@include avertaFont('regular', 400, normal);
+@include avertaFont('semibolditalic', 500, italic);
+@include avertaFont('semibold', 500, normal);
+@include avertaFont('semibolditalic', 600, italic);
+@include avertaFont('semibold', 600, normal);
+@include avertaFont('bolditalic', 700, italic);
+@include avertaFont('bold', 700, normal);
+@include avertaFont('extrabolditalic', 800, italic);
+@include avertaFont('extrabold', 800, normal);
+@include avertaFont('blackitalic', 900, italic);
+@include avertaFont('black', 900, normal);
+
+@import '~vuetify/src/styles/styles.sass';
+
+body {
+  overflow-x: hidden;
+}
+
+.v-application code {
+  color: inherit !important;
+  box-shadow: none !important;
+  font-size: 0.8rem !important;
+  font-weight: inherit !important;
+}
+
+.v-application pre code {
+  &:before, &:after {
+    content: '' !important;
+  }
+}
+
+pre {
+  border-radius: 4px;
+}

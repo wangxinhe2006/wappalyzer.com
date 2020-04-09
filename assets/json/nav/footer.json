@@ -1,0 +1,31 @@
+{
+  "icons": [
+    {
+      "icon": "mdi-github",
+      "href": "https://github.com/aliasio/wappalyzer"
+    },
+    {
+      "icon": "mdi-slack",
+      "href":
+      "https://join.slack.com/t/wappalyzer/shared_invite/enQtMjc1MzA2NzE4NzkwLTA5Y2RmMTQxMTFhYzViODQzMzUyNGFkMWIzY2ZhZmFlOWY2NTcyZWY4OWVjYzhiY2JhZTZlMzBiNThlMWJiMjU"
+    },
+    {
+      "icon": "mdi-twitter",
+      "href": "https://twitter.com/Wappalyzer"
+    },
+    {
+      "icon": "mdi-linkedin",
+      "href": "https://www.linkedin.com/company/wappalyzer"
+    }
+  ],
+  "items": [
+    {
+      "title": "Privacy",
+      "to": "/privacy"
+    },
+    {
+      "title": "Get in touch",
+      "to": "/contact"
+    }
+  ]
+}

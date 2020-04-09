@@ -1,0 +1,14 @@
+[
+  { "value": "au_abn", "text": "Australian Business Number" },
+  { "value": "ca_bn",  "text": "Canadian BN" },
+  { "value": "es_cif", "text": "Spanish CIF number" },
+  { "value": "eu_vat", "text": "European VAT number" },
+  { "value": "hk_br",  "text": "Hong Kong BR number" },
+  { "value": "in_gst", "text": "Indian GST number" },
+  { "value": "no_vat", "text": "Norwegian VAT number" },
+  { "value": "nz_gst", "text": "New Zealand GST number" },
+  { "value": "ru_inn", "text": "Russian INN" },
+  { "value": "sg_uen", "text": "Singaporean UEN" },
+  { "value": "th_vat", "text": "Thai VAT" },
+  { "value": "tw_vat", "text": "Taiwanese VAT" }
+]

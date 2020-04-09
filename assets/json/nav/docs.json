@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Development",
+    "icon": "mdi-monitor",
+    "to": "/docs/dev",
+    "items": [
+      {
+        "title": "Contributing",
+        "to": "/docs/dev/contributing"
+      },
+      {
+        "title": "Specification",
+        "to": "/docs/dev/specification"
+      }
+    ]
+  },
+  {
+    "title": "APIs",
+    "icon": "mdi-console",
+    "to": "/docs/api",
+    "items": [
+      {
+        "title": "Basics",
+        "to": "/docs/api/basics"
+      },
+      {
+        "title": "Lookup API",
+        "to": "/docs/api/lookup"
+      },
+      {
+        "title": "Analyze API",
+        "to": "/docs/api/analyze"
+      },
+      {
+        "title": "Crawl API",
+        "to": "/docs/api/crawl"
+      },
+      {
+        "title": "Dataset API",
+        "to": "/docs/api/dataset"
+      }
+    ]
+  }
+]

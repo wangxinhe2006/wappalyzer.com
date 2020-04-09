@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "Identify technology on websites",
+    "text": "Wappalyzer is a technographics data provider, uncovering technologies such as content management systems, customer relationship management, ecommerce platforms, advertising networks, marketing tools and analytics."
+  },
+  "lookup": {
+    "title": "Technology lookup",
+    "subtitle": "Find out what websites are built with",
+    "icon": "mdi-layers-outline",
+    "image": "lookup.svg",
+    "text": "Reveal the technology stack of any website, instantly and for free.",
+    "buttons": [
+      {
+        "text": "Look up a website",
+        "to": "/lookup",
+        "icon": "mdi-magnify"
+      }
+    ],
+    "features": ["It's free", "Look up any website"],
+    "feature": true
+  },
+  "apis": {
+    "title": "APIs",
+    "subtitle": "Programmatic access to technographic data",
+    "icon": "mdi-console",
+    "image": "api.svg",
+    "text": "The Wappalyzer APIs provide instant access to website technology stacks. Track your prospects' technology choices, examine large numbers of websites or enrich your own datasets.",
+    "buttons": [
+      {
+        "text": "Compare APIs",
+        "to": "/api",
+        "icon": "mdi-arrow-right"
+      },
+      {
+        "text": "API reference",
+        "to": "/docs/api",
+        "icon": "mdi-book-open-page-variant",
+        "secondary": true
+      }
+    ],
+    "features": ["Get started in minutes", "Perform instant lookups", "Real-time analysis"],
+    "feature": true
+  },
+  "download": {
+    "title": "Browser extension",
+    "subtitle": "Get the free browser extension",
+    "icon": "mdi-puzzle",
+    "image": "extension.svg",
+    "text": "Install the Wappalyzer browser extension to see the technologies used on websites you visit at a glance.",
+    "buttons": [
+      {
+        "text": "Download",
+        "to": "/download",
+        "icon": "mdi-download"
+      }
+    ],
+    "features": [
+      "It's free",
+      "Available on Chrome, Firefox and Edge",
+      "Works locally and offline"
+    ],
+    "feature": true
+  },
+  "datasets": {
+    "title": "Datasets",
+    "subtitle": "Create a list of websites that use certain technologies",
+    "icon": "mdi-database",
+    "image": "dataset.svg",
+    "text": "Technographic datasets provide valuable insights into the software industry. Essential for market research and competitor analysis.",
+    "buttons": [
+      {
+        "text": "Create a dataset",
+        "to": "/datasets",
+        "icon": "mdi-arrow-right"
+      }
+    ],
+    "features": [
+      "Over a thousand technologies tracked",
+      "Organic data with traffic markers",
+      "Fresh and accurate data"
+    ],
+    "feature": true
+  },
+  "bulk": {
+    "title": "Bulk lookup",
+    "subtitle": "Look up a large number of websites in one go",
+    "icon": "mdi-file-table-outline",
+    "image": "bulk.svg",
+    "text": "Supply your own list of websites to perform a large number of technology lookups in one go. Essential for competitive analysis and understanding your target market.",
+    "buttons": [
+      {
+        "text": "Upload a list",
+        "to": "/bulk",
+        "icon": "mdi-upload"
+      }
+    ],
+    "features": [
+      "Perform up to 10K lookups at once",
+      "Effortless and integration free",
+      "Fresh and accurate data"
+    ],
+    "feature": true
+  }
+}

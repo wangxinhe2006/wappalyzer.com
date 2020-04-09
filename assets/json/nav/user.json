@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Account",
+    "icon": "mdi-account",
+    "to": "/account"
+  },
+  {
+    "title": "Payment methods",
+    "icon": "mdi-credit-card",
+    "to": "/paymentmethods"
+  },
+  {
+    "title": "Subscriptions",
+    "icon": "mdi-calendar-refresh",
+    "to": "/subscriptions"
+  },
+  {
+    "title": "Orders",
+    "icon": "mdi-cart",
+    "to": "/orders"
+  },
+  {
+    "title": "Invoices",
+    "icon": "mdi-text-box-outline",
+    "to": "/invoices"
+  },
+  {
+    "title": "API Key",
+    "icon": "mdi-key-variant",
+    "to": "/apikey"
+  },
+  {
+    "title": "Sign out",
+    "icon": "mdi-logout-variant",
+    "to": "/signout",
+    "auth": true
+  }
+]
