@@ -11,7 +11,7 @@
           <li>URLs must start with http:// or https://</li>
           <li>Include up to 10,000 URLs</li>
           <li>
-            The resulting dataset is in JSON format (<a
+            The resulting dataset is in CSV and JSON format (<a
               href="/bulk-sample.json"
               download
               >sample</a
