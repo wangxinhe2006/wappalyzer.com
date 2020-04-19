@@ -16,7 +16,14 @@ export default {
         content: ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
+      }
+    ]
   },
   loading: { color: '#fff' },
   css: ['~/assets/scss/styles.scss'],
@@ -51,6 +58,7 @@ export default {
   },
   vuetify: {
     customVariables: ['~/assets/scss/variables.scss'],
+    defaultAssets: false,
     treeShake: true,
     theme: {
       dark: false,
