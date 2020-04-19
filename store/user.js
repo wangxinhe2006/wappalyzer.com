@@ -263,5 +263,25 @@ export const actions = {
     } else {
       await dispatch('updateAttrs')
     }
+  },
+
+  async delete({ state, commit, dispatch }, attributes) {
+    const cognitoUser = Pool.getCurrentUser()
+
+    if (cognitoUser) {
+      await new Promise((resolve, reject) => {
+        cognitoUser.getSession((error, session) => {
+          if (error) {
+            return reject(error)
+          }
+
+          cognitoUser.deleteUser((error, result) =>
+            error ? reject(error) : resolve(result)
+          )
+        })
+      })
+    }
+
+    await dispatch('updateAttrs')
   }
 }

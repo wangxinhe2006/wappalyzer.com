@@ -21,7 +21,7 @@
       <v-icon right>mdi-open-in-new</v-icon>
     </v-btn>
 
-    <v-card>
+    <v-card class="mb-4">
       <template v-if="isAdmin">
         <v-card-title>
           Administration
@@ -114,16 +114,19 @@
       <Account v-on:save="accountDetailsSaved" />
     </v-card>
 
-    <v-dialog v-model="changeEmailDialog">
+    <v-btn @click="deleteAccountDialog = true" color="error" outlined>
+      <v-icon left>mdi-account-remove</v-icon>
+      Delete account
+    </v-btn>
+
+    <v-dialog v-model="changeEmailDialog" width="80%" max-width="400">
       <v-card>
         <v-card-title>
           Email address change
         </v-card-title>
         <v-card-text>
-          <p>
-            You will be signed out. You must to verify your new email address to
-            sign back in.
-          </p>
+          You will be signed out. You must to verify your new email address to
+          sign back in.
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -131,6 +134,26 @@
             >Cancel</v-btn
           >
           <v-btn @click="submit(true)" color="accent" text>Ok</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="deleteAccountDialog" width="80%" max-width="400">
+      <v-card>
+        <v-card-title>
+          Delete account
+        </v-card-title>
+        <v-card-text>
+          Your account will be deleted permanently.
+        </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn @click="deleteAccountDialog = false" color="accent" text
+            >Cancel</v-btn
+          >
+          <v-btn @click="remove" :loading="removing" color="error" text
+            >Delete</v-btn
+          >
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -152,10 +175,12 @@ export default {
     return {
       title: 'Account',
       changeEmailDialog: false,
+      deleteAccountDialog: false,
       email: '',
       error: false,
       newPassword: '',
       oldPassword: '',
+      removing: false,
       stripeCustomer: '',
       rules: {
         email: [(v) => /@/.test(v) || 'Enter a valid email address'],
@@ -184,7 +209,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      save: 'user/save',
+      saveUser: 'user/save',
+      deleteUser: 'user/delete',
       changePassword: 'user/changePassword'
     }),
     async submit(emailChange) {
@@ -209,7 +235,7 @@ export default {
             })
           }
 
-          await this.save({
+          await this.saveUser({
             email: this.email,
             stripeCustomer: this.stripeCustomer
           })
@@ -224,10 +250,25 @@ export default {
         this.saving = false
       }
     },
+    async remove() {
+      this.removing = true
+      this.error = false
+
+      try {
+        await this.deleteUser()
+      } catch (error) {
+        this.error = this.getErrorMessage(error)
+      }
+
+      this.removing = false
+      this.deleteAccountDialog = false
+
+      this.scrollToTop()
+    },
     accountDetailsSaved() {
       this.success = 'Your details have been updated'
 
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      this.scrollToTop()
     },
     fill() {
       this.email = this.user.email
