@@ -13,7 +13,7 @@
         powers the <nuxt-link to="/download">browser extension</nuxt-link> and
         <nuxt-link to="/api">APIs</nuxt-link>. The project is largely community
         driven, upstream
-        <nuxt-link to="docs/dev">contributions</nuxt-link>
+        <nuxt-link to="/docs/dev/contributing">contributions</nuxt-link>
         are encouraged.
       </p>
 
