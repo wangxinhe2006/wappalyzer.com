@@ -20,6 +20,10 @@
   ],
   "items": [
     {
+      "title": "Terms",
+      "to": "/terms"
+    },
+    {
       "title": "Privacy",
       "to": "/privacy"
     },

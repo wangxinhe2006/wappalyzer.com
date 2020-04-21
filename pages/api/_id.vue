@@ -120,8 +120,10 @@
         <small>
           Prices are in Australian dollars.<br />
           <nuxt-link to="/contact">Contact us</nuxt-link> for firehose access
-          and tailored plans.</small
-        >
+          and tailored plans.<br />
+          By using our services, you agree to our
+          <nuxt-link to="/terms">terms of service</nuxt-link>.
+        </small>
       </v-container>
 
       <div class="py-2" />

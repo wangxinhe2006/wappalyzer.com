@@ -9,7 +9,7 @@
       <template v-slot:content>
         <h2 class="mb-4">Get an instant quote</h2>
 
-        <v-card class="mb-8">
+        <v-card class="mb-4">
           <v-card-text v-if="error">
             <v-alert type="error">
               {{ error }}
@@ -353,10 +353,17 @@
           @click="submit"
           :disabled="!selectedItems.length"
           color="primary"
-          class="mb-4"
+          class="mt-4 mb-4"
           large
           >Request quote <v-icon right>mdi-arrow-right</v-icon>
         </v-btn>
+
+        <p class="mb-8">
+          <small>
+            By using our services, you agree to our
+            <nuxt-link to="/terms" target="_blank">terms of service</nuxt-link>.
+          </small>
+        </p>
       </template>
 
       <v-dialog v-model="signInDialog" max-width="400px">

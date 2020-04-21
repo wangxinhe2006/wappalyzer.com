@@ -47,6 +47,13 @@
         </v-col>
       </v-row>
 
+      <p class="mt-4">
+        <small>
+          By using our services, you agree to our
+          <nuxt-link to="/terms" target="_blank">terms of service</nuxt-link>.
+        </small>
+      </p>
+
       <v-dialog v-model="signInDialog" max-width="400px">
         <SignIn mode-continue mode-sign-up />
       </v-dialog>

@@ -9,9 +9,12 @@
         practices that are specific to the extension.
       </p>
 
-      <h3 class="mt-8 mb-2">
+      <h2 id="information-we-collect" class="mt-8 mb-2">
         Information we collect
-      </h3>
+        <a href="#information-we-collect"
+          ><v-icon color="accent">mdi-link</v-icon></a
+        >
+      </h2>
 
       <p>
         You do not need to provide any personal information in order to download
@@ -25,9 +28,10 @@
         and transmit data if you choose to have them enabled.
       </p>
 
-      <h3 class="mt-8 mb-2">
+      <h2 id="basic-features" class="mt-8 mb-2">
         Basic features
-      </h3>
+        <a href="#basic-features"><v-icon color="accent">mdi-link</v-icon></a>
+      </h2>
 
       <p>
         Any time you use the extension to analyze a website, the extension sends
@@ -39,9 +43,12 @@
         since no personally identifiable information is stored.
       </p>
 
-      <h3 class="mt-8 mb-2">
+      <h2 id="information-security" class="mt-8 mb-2">
         Information security
-      </h3>
+        <a href="#information-security"
+          ><v-icon color="accent">mdi-link</v-icon></a
+        >
+      </h2>
 
       <p>
         Any information sent to Wappalyzer will be maintained in accordance with
@@ -49,9 +56,10 @@
         cover information that you send to third party sites.
       </p>
 
-      <h3 class="mt-8 mb-2">
+      <h2 id="your-choices" class="mt-8 mb-2">
         Your choices
-      </h3>
+        <a href="#your-choices"><v-icon color="accent">mdi-link</v-icon></a>
+      </h2>
 
       <p>
         Any feature that works by automatically sending information about sites

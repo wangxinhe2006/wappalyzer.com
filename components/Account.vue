@@ -1,5 +1,5 @@
 <template>
-  <v-form ref="form" v-model="valid" class="ml-0 mr-0">
+  <v-form ref="form" v-model="valid" class="ml-0 mr-0" style="overflow: hidden">
     <v-alert v-if="error" type="error" class="mt-4 mx-4 mb-0">
       {{ error }}
     </v-alert>
