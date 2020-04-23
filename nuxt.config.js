@@ -6,24 +6,34 @@ export default {
   mode: 'spa',
   head: {
     titleTemplate: (title) => `${title ? `${title} - ` : ''}Wappalyzer`,
-    meta: [
-      { charset: 'utf-8' },
-      { theme_color: '#4608ad' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: ''
-      }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'
-      }
-    ]
+    meta: [{ charset: 'utf-8' }, { theme_color: '#4608ad' }]
+  },
+  csp: {
+    reportOnly: true,
+    hashAlgorithm: 'sha256',
+    policies: {
+      'default-src': ["'self'"],
+      'img-src': ['https:', '*.google-analytics.com'],
+      'worker-src': ["'none'"],
+      'style-src': ["'self'", "'unsafe-inline'"],
+      'script-src': [
+        "'self'",
+        "'unsafe-inline'",
+        '*.google-analytics.com',
+        '*.stripe.com',
+        '*.sentry-cdn.com'
+      ],
+      'connect-src': [
+        '*.google-analytics.com',
+        '*.stripe.com',
+        '*.wappalyzer.com'
+      ],
+      'form-action': ["'self'"],
+      'frame-ancestors': ["'none'"],
+      'frame-src': ['*.stripe.com'],
+      'object-src': ["'none'"],
+      'report-uri': [process.env.SENTRY_SECURITY_ENDPOINT]
+    }
   },
   loading: { color: '#fff' },
   css: ['~/assets/scss/styles.scss'],
@@ -46,7 +56,12 @@ export default {
       }
     ]
   ],
-  modules: ['@nuxtjs/axios', 'nuxt-stripe-module'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/sentry',
+    'nuxt-stripe-module',
+    'nuxtjs-mdi-font'
+  ],
   axios: {
     baseURL: process.env.BASE_URL,
     secure: true,
@@ -55,6 +70,10 @@ export default {
   stripe: {
     version: 'v3',
     publishableKey: process.env.STRIPE_PUBLIC_KEY
+  },
+  sentry: {
+    dsn: process.env.SENTRY_DSN,
+    config: {}
   },
   vuetify: {
     customVariables: ['~/assets/scss/variables.scss'],

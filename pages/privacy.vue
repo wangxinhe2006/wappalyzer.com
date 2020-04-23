@@ -2,69 +2,61 @@
   <div>
     <Page :title="title" crumbs narrow>
       <p>
-        The Wappalyzer Privacy Policy describes how we treat personal
-        information when you use Wappalyzer's products and services, including
-        information provided when you use the Wappalyzer browser extension
-        ('extension'). In addition, the following describes our privacy
-        practices that are specific to the extension.
+        The Wappalyzer privacy policy describes how we treat personal
+        information when you use our website, software and APIs (collectively,
+        '<strong>Services</strong>').
       </p>
 
-      <h2 id="information-we-collect" class="mt-8 mb-2">
-        Information we collect
-        <a href="#information-we-collect"
+      <h2 id="log-data" class="mt-8 mb-2">
+        Log data
+        <a href="#log-data"><v-icon color="accent">mdi-link</v-icon></a>
+      </h2>
+
+      <p>
+        As with most websites and technology services delivered over the
+        internet, our servers automatically collect information when you access
+        or use our Services and record it in log files. This log data may
+        include the internet protocol (IP) address, the date and time the
+        Services were used, browser type and settings and cookie data.
+      </p>
+
+      <h2 id="account-registration" class="mt-8 mb-2">
+        Account registration
+        <a href="#account-registration"
+          ><v-icon color="accent">mdi-link</v-icon></a
+        >
+      </h2>
+
+      <p>
+        When you open an account, you provide us with personal information that
+        includes your email address and a password. You can also choose to add a
+        billing address to your account. You can delete your information and
+        cancel your account at any time.
+      </p>
+
+      <h2 id="browser-extension" class="mt-8 mb-2">
+        Browser extension
+        <a href="#browser-extension"
           ><v-icon color="accent">mdi-link</v-icon></a
         >
       </h2>
 
       <p>
         You do not need to provide any personal information in order to download
-        and use the extension. All of the features can be used without sharing
-        any personally identifiable information.
+        and use the browser extension.
       </p>
 
       <p>
-        The extension has some basic features that work automatically when you
-        use the browser extension. Other features are optional and only operate
-        and transmit data if you choose to have them enabled.
+        We do not track your browsing behaviour or any information that can be
+        traced back to you personally.
       </p>
 
-      <h2 id="basic-features" class="mt-8 mb-2">
-        Basic features
-        <a href="#basic-features"><v-icon color="accent">mdi-link</v-icon></a>
-      </h2>
-
       <p>
-        Any time you use the extension to analyze a website, the extension sends
-        basic, limited information including the domain name of the website you
-        have visited and what application was identified on it. This data is
-        retained in Wappalyzer's server logs and protected according to our
-        general Privacy Policy but may be sold to or shared with our third party
-        partners. At no time can this data be traced back to you personally,
-        since no personally identifiable information is stored.
-      </p>
-
-      <h2 id="information-security" class="mt-8 mb-2">
-        Information security
-        <a href="#information-security"
-          ><v-icon color="accent">mdi-link</v-icon></a
-        >
-      </h2>
-
-      <p>
-        Any information sent to Wappalyzer will be maintained in accordance with
-        the Wappalyzer Privacy Policy. Wappalyzer's Privacy Policy does not
-        cover information that you send to third party sites.
-      </p>
-
-      <h2 id="your-choices" class="mt-8 mb-2">
-        Your choices
-        <a href="#your-choices"><v-icon color="accent">mdi-link</v-icon></a>
-      </h2>
-
-      <p>
-        Any feature that works by automatically sending information about sites
-        when you visit them can be disabled and re-enabled in the extension
-        settings.
+        The browser extension periodically sends information about websites you
+        visit to our servers. This information includes domain names, anonymised
+        URLs and the names of identified technologies. This information may be
+        sold to or shared with third parties. You can disable the automatic
+        sending of information in the browser extension settings.
       </p>
     </Page>
   </div>
