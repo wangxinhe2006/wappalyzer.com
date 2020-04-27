@@ -162,13 +162,13 @@ export default {
   async created() {
     try {
       this.category = (
-        await this.$axios.get(`technologies/${this.categorySlug}`)
+        await this.$axios.get(`categories/${this.categorySlug}`)
       ).data
     } catch (error) {
       if (error.response && error.response.status === 301) {
-        const { categorySlug, slug } = error.response.data
+        const { slug } = error.response.data
 
-        this.$router.push(`/technologies/${categorySlug}/${slug}`)
+        this.$router.push(`/technologies/${slug}`)
       } else {
         this.$nuxt.error(error)
       }

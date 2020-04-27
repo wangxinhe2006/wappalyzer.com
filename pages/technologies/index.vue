@@ -71,7 +71,7 @@ export default {
     }
   },
   async created() {
-    this.categories = (await this.$axios.get('technologies')).data
+    this.categories = (await this.$axios.get('categories')).data
   },
   methods: {
     selectTechnology(item) {

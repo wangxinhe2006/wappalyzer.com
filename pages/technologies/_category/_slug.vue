@@ -190,9 +190,7 @@ export default {
     }
   },
   async created() {
-    this.technology = (
-      await this.$axios.get(`technologies/${this.categorySlug}/${this.slug}`)
-    ).data
+    this.technology = (await this.$axios.get(`technologies/${this.slug}`)).data
   }
 }
 </script>

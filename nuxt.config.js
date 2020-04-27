@@ -6,7 +6,11 @@ export default {
   mode: 'spa',
   head: {
     titleTemplate: (title) => `${title ? `${title} - ` : ''}Wappalyzer`,
-    meta: [{ charset: 'utf-8' }, { theme_color: '#4608ad' }]
+    meta: [
+      { charset: 'utf-8' },
+      { theme_color: '#4608ad' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    ]
   },
   csp: {
     reportOnly: true,
@@ -20,8 +24,7 @@ export default {
         "'self'",
         "'unsafe-inline'",
         '*.google-analytics.com',
-        '*.stripe.com',
-        '*.sentry-cdn.com'
+        '*.stripe.com'
       ],
       'connect-src': [
         '*.google-analytics.com',
@@ -31,8 +34,7 @@ export default {
       'form-action': ["'self'"],
       'frame-ancestors': ["'none'"],
       'frame-src': ['*.stripe.com'],
-      'object-src': ["'none'"],
-      'report-uri': [process.env.SENTRY_SECURITY_ENDPOINT]
+      'object-src': ["'none'"]
     }
   },
   loading: { color: '#fff' },
@@ -56,12 +58,7 @@ export default {
       }
     ]
   ],
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/sentry',
-    'nuxt-stripe-module',
-    'nuxtjs-mdi-font'
-  ],
+  modules: ['@nuxtjs/axios', 'nuxt-stripe-module', 'nuxtjs-mdi-font'],
   axios: {
     baseURL: process.env.BASE_URL,
     secure: true,
@@ -70,10 +67,6 @@ export default {
   stripe: {
     version: 'v3',
     publishableKey: process.env.STRIPE_PUBLIC_KEY
-  },
-  sentry: {
-    dsn: process.env.SENTRY_DSN,
-    config: {}
   },
   vuetify: {
     customVariables: ['~/assets/scss/variables.scss'],

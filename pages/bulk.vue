@@ -9,7 +9,7 @@
             Upload a .txt file containing URLs, each on a separate line
           </li>
           <li>URLs must start with http:// or https://</li>
-          <li>Include up to 10,000 URLs</li>
+          <li>Include up to 1,000 URLs</li>
           <li>
             The resulting dataset is in CSV and JSON format (<a
               href="/bulk-sample.json"
@@ -145,20 +145,23 @@ export default {
 
       this.fileContent = await file.text()
 
-      this.fileContent
-        .trim()
-        .split('\n')
-        .forEach((line, i) => {
-          const a = document.createElement('a')
+      const lines = this.fileContent.trim().split('\n')
 
-          a.href = line
+      if (lines.length > 1000) {
+        this.fileErrors.push('Limit of 1,000 URLs exceeded')
+      }
 
-          const { hostname } = a
+      lines.forEach((line, i) => {
+        const a = document.createElement('a')
 
-          if (!/^https?:\/\//.test(line) || !hostname) {
-            this.fileErrors.push(`Invalid URL on line ${i + 1}: ${line}`)
-          }
-        })
+        a.href = line
+
+        const { hostname } = a
+
+        if (!/^https?:\/\//.test(line) || !hostname) {
+          this.fileErrors.push(`Invalid URL on line ${i + 1}: ${line}`)
+        }
+      })
     }
   }
 }

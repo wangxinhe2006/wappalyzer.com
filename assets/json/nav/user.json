@@ -11,7 +11,7 @@
   },
   {
     "title": "Subscriptions",
-    "icon": "mdi-calendar-refresh",
+    "icon": "mdi-calendar-repeat",
     "to": "/subscriptions"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "title": "Invoices",
-    "icon": "mdi-text-box-outline",
+    "icon": "mdi-file-document-box-outline",
     "to": "/invoices"
   },
   {

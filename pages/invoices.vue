@@ -51,10 +51,12 @@
                     :to="`/orders/${invoice.orderId}`"
                     icon
                   >
-                    <v-icon color="accent">mdi-text-box-outline</v-icon>
+                    <v-icon color="accent"
+                      >mdi-file-document-box-outline</v-icon
+                    >
                   </v-btn>
                   <v-btn v-else disabled icon>
-                    <v-icon>mdi-text-box-remove-outline</v-icon>
+                    <v-icon>mdi-file-document-box-remove-outline</v-icon>
                   </v-btn>
                 </td>
                 <td>

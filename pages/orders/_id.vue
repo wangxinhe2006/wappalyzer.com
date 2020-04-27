@@ -103,7 +103,7 @@
         color="accent"
         outlined
       >
-        <v-icon left>mdi-text-box-outline</v-icon>
+        <v-icon left>mdi-file-document-box-outline</v-icon>
         Invoice
       </v-btn>
 

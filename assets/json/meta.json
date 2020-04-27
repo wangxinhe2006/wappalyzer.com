@@ -95,7 +95,7 @@
       }
     ],
     "features": [
-      "Perform up to 10K lookups at once",
+      "Perform up to 1,000 lookups at once",
       "Effortless and integration free",
       "Fresh and accurate data"
     ],

@@ -6,7 +6,7 @@ function getAuth(state) {
 }
 
 // eslint-disable-next-line handle-callback-err
-export default async ({ store: { dispatch, state }, $axios, $sentry }) => {
+export default async ({ store: { dispatch, state }, $axios }) => {
   try {
     await dispatch('user/updateAttrs')
   } catch (error) {
@@ -36,8 +36,6 @@ export default async ({ store: { dispatch, state }, $axios, $sentry }) => {
         }
       }
     }
-
-    $sentry.captureException(error)
 
     return Promise.reject(error)
   })
