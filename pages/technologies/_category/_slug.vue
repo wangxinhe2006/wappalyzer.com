@@ -13,11 +13,7 @@
         {{ title }}
       </h1>
 
-      <Progress v-if="!technology && !error" />
-
-      <v-alert v-if="error" type="error">
-        {{ error }}
-      </v-alert>
+      <Progress v-if="!technology" />
 
       <template v-if="technology">
         <div class="d-flex align-center mb-2">
@@ -61,7 +57,7 @@
             </template>
           </v-alert>
 
-          <v-btn to="/technologies" class="mt-4" color="accent" outlined>
+          <v-btn to="/technologies" class="mt-4" color="accent" outlined exact>
             <v-icon left>mdi-magnify</v-icon>
             Browse technologies
           </v-btn>
@@ -149,8 +145,7 @@ export default {
   },
   data() {
     return {
-      technology: false,
-      error: false
+      technology: false
     }
   },
   computed: {
@@ -190,7 +185,13 @@ export default {
     }
   },
   async created() {
-    this.technology = (await this.$axios.get(`technologies/${this.slug}`)).data
+    try {
+      this.technology = (
+        await this.$axios.get(`technologies/${this.slug}`)
+      ).data
+    } catch (error) {
+      this.$nuxt.error(error)
+    }
   }
 }
 </script>

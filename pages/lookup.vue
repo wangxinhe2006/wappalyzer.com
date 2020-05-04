@@ -142,7 +142,9 @@ export default {
             await this.$axios(`lookup/${encodeURIComponent(this.url)}`)
           ).data
         } catch (error) {
-          this.error = this.getErrorMessage(error)
+          this.error =
+            (error.response && error.response.data) ||
+            this.getErrorMessage(error)
         }
       }
 
