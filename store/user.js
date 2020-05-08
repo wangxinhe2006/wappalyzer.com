@@ -79,24 +79,30 @@ export const actions = {
     const attributeList = [
       new CognitoUserAttribute({
         Name: 'email',
-        Value: Username
+        Value: Username.trim()
       })
     ]
 
     return new Promise((resolve, reject) => {
-      Pool.signUp(Username, Password, attributeList, null, (error, result) => {
-        if (error) {
-          return reject(error)
-        }
+      Pool.signUp(
+        Username.trim(),
+        Password,
+        attributeList,
+        null,
+        (error, result) => {
+          if (error) {
+            return reject(error)
+          }
 
-        resolve()
-      })
+          resolve()
+        }
+      )
     })
   },
 
   verifySignUp(context, { username: Username, code }) {
     const cognitoUser = new CognitoUser({
-      Username,
+      Username: Username.trim(),
       Pool
     })
 
@@ -108,7 +114,7 @@ export const actions = {
   },
 
   reverifySignUp(context, { username: Username }) {
-    const cognitoUser = new CognitoUser({ Username, Pool })
+    const cognitoUser = new CognitoUser({ Username: Username.trim(), Pool })
 
     return new Promise((resolve, reject) => {
       cognitoUser.resendConfirmationCode((error, result) =>
@@ -118,11 +124,11 @@ export const actions = {
   },
 
   signIn({ commit, dispatch }, { username: Username, password: Password }) {
-    const cognitoUser = new CognitoUser({ Username, Pool })
+    const cognitoUser = new CognitoUser({ Username: Username.trim(), Pool })
 
     return new Promise((resolve, reject) => {
       const authenticationDetails = new AuthenticationDetails({
-        Username,
+        Username: Username.trim(),
         Password
       })
 
@@ -211,7 +217,7 @@ export const actions = {
 
   reset(context, { username: Username }) {
     const cognitoUser = new CognitoUser({
-      Username,
+      Username: Username.trim(),
       Pool
     })
 
@@ -225,7 +231,7 @@ export const actions = {
 
   verifyReset(context, { username: Username, password, code }) {
     const cognitoUser = new CognitoUser({
-      Username,
+      Username: Username.trim(),
       Pool
     })
 

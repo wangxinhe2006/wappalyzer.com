@@ -14,7 +14,9 @@ export default async ({ store: { dispatch, state }, $axios }) => {
   }
 
   $axios.onRequest((config) => {
-    config.headers.common.Authorization = getAuth(state)
+    if (!/^https?:/.test(config.url)) {
+      config.headers.common.Authorization = getAuth(state)
+    }
 
     return config
   })

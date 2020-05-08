@@ -166,9 +166,8 @@ export default {
       ).data
     } catch (error) {
       if (error.response && error.response.status === 301) {
-        const { slug } = error.response.data
-
-        this.$router.push(`/technologies/${slug}`)
+        const { categorySlug, slug } = error.response.data
+        this.$router.push(`/technologies/${categorySlug}/${slug}`)
       } else {
         this.$nuxt.error(error)
       }

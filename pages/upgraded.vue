@@ -94,7 +94,7 @@ export default {
     this.set({})
 
     try {
-      this.release = (await this.$axios.get('release')).data
+      this.release = (await this.$axios.get(process.env.RELEASE_URL)).data
     } catch (error) {
       this.error = this.getErrorMessage(error)
     }
